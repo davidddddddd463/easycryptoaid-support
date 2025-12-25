@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EasyCryptoAid Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: #f6f7f9;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0b5cff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            color: #555;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Complaint card */
+        .complaint-wrapper {
+            background: linear-gradient(135deg, #0b5cff, #17c3b2);
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+        }
+
+        .complaint-wrapper p {
+            opacity: 0.9;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 16px;
+            margin-top: 10px;
+            margin-bottom: 18px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.6);
+            background: rgba(255,255,255,0.15);
+            color: white;
+            font-size: 15px;
+            outline: none;
+        }
+
+        textarea {
+            border-radius: 20px;
+            height: 120px;
+            resize: none;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(255,255,255,0.75);
+        }
+
+        button {
+            background: rgba(255,255,255,0.35);
+            border: none;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background: rgba(255,255,255,0.5);
+        }
+
+        footer {
+            background: #111;
+            color: #ccc;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        footer h4 {
+            color: white;
+        }
+
+        footer p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>EasyCryptoAid Support</header>
+
+<div class="container">
+
+    <div class="hero">
+        <h1>How can we help?</h1>
+        <p>We're here to provide fast, friendly, and reliable support whenever you need it.</p>
+    </div>
+
+    <div class="section">
+        <h2>Why Trust EasyCryptoAid</h2>
+        <p>Secure, responsive, human support for crypto users worldwide.</p>
+    </div>
+
+    <div class="section">
+        <h2>Support Topics</h2>
+        <ul>
+            <li>Wallet & Recovery Assistance</li>
+            <li>Buying and Cashing Out Crypto</li>
+            <li>Security & Scam Prevention</li>
+            <li>DeFi & dApps</li>
+        </ul>
+    </div>
+
+    <!-- COMPLAINT FORM -->
+    <div class="section">
+        <div class="complaint-wrapper">
+            <h2>Submit a Complaint</h2>
+            <p>Please fill out the form below and our support team will assist you.</p>
+
+            <form onsubmit="openChat(); return false;">
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Your Phone Number" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Describe your complaint..." required></textarea>
+
+                <button type="submit">
+                    Submit & Chat with Live Support
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h4>Services</h4>
+            <p>Wallet Support</p>
+            <p>Recovery Help</p>
+            <p>Security</p>
+        </div>
+        <div>
+            <h4>Learn</h4>
+            <p>Crypto Basics</p>
+            <p>Tutorials</p>
+        </div>
+        <div>
+            <h4>Company</h4>
+            <p>About EasyCryptoAid</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        © 2025 EasyCryptoAid
+    </div>
+</footer>
+
+<!-- SMARTSUPP LIVE CHAT -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'c2a520c045c5db927df90f4229964ceb26cf3e4a';
+window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments) };
+    o._=[];
+    s=d.getElementsByTagName('script')[0];
+    c=d.createElement('script');
+    c.type='text/javascript';
+    c.charset='utf-8';
+    c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js';
+    s.parentNode.insertBefore(c,s);
+})(document);
+
+function openChat() {
+    if (window.smartsupp) {
+        smartsupp('chat:open');
+    }
+}
+</script>
+
+</body>
+</html>
